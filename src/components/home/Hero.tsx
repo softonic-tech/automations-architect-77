@@ -37,9 +37,14 @@ export function Hero() {
 
           <h1 className="font-display text-4xl leading-[1.05] font-semibold text-balance sm:text-5xl lg:text-6xl">
             <StaggerWords text="AI Automation That Turns Repetitive Work Into" />{" "}
-            <span className="text-gradient">
-              <StaggerWords text="Autonomous Systems" />
-            </span>
+            <motion.span
+              className="text-gradient inline-block"
+              initial={reduced ? false : { opacity: 0, y: "0.4em", filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            >
+              Autonomous Systems
+            </motion.span>
           </h1>
 
           <motion.p
