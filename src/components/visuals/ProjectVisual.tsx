@@ -194,7 +194,7 @@ function Waveform() {
           <motion.span
             key={i}
             className="w-full rounded-full bg-primary/50"
-            style={{ height: `${18 + Math.abs(Math.sin(i * 1.3)) * 70}%` }}
+            style={{ height: `${18 + Math.round(Math.abs(Math.sin(i * 1.3)) * 70)}%` }}
             animate={reduced ? {} : { scaleY: [0.5, 1, 0.6, 1, 0.5] }}
             transition={{ duration: 2.2, repeat: Infinity, delay: i * 0.04 }}
           />
